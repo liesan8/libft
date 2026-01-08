@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andyliesenbein <andyliesenbein@student.    +#+  +:+       +#+        */
+/*   By: aliesenb <aliesenb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:46:25 by andyliesenb       #+#    #+#             */
-/*   Updated: 2026/01/08 13:51:31 by andyliesenb      ###   ########.fr       */
+/*   Updated: 2026/01/08 15:07:05 by aliesenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
