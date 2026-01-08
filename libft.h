@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andyliesenbein <andyliesenbein@student.    +#+  +:+       +#+        */
+/*   By: aliesenb <aliesenb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 13:46:25 by andyliesenb       #+#    #+#             */
-/*   Updated: 2026/01/08 13:51:31 by andyliesenb      ###   ########.fr       */
+/*   Created: 2026/01/08 15:08:11 by aliesenb          #+#    #+#             */
+/*   Updated: 2026/01/08 15:08:17 by aliesenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef LIBFT_H
 # define LIBFT_H
