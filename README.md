@@ -1,2 +1,9 @@
-# Libft Project - 42 School
-## My first C library at 42
+# Libft
+
+Custom C library - 42 School Project
+
+## Compilation
+make
+
+## Author
+aliesenb - 42 Luxembourg
