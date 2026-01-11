@@ -1,8 +1,20 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    create_all_files.sh                                :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: aliesenb <aliesenb@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/01/11 07:19:49 by aliesenb          #+#    #+#              #
+#    Updated: 2026/01/11 13:15:14 by aliesenb         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 #!/bin/bash
 echo "Creating all files..."
 
 # README.md
-cat > README.md << 'EOF'
+cat > README.md
 # Libft
 
 Custom C library - 42 School Project
@@ -12,10 +24,9 @@ make
 
 ## Author
 aliesenb - 42 Luxembourg
-EOF
 
 # libft.h
-cat > libft.h << 'EOF'
+cat > libft.h
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -26,8 +37,9 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}	t_list;
+}
 
+t_list;
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -73,10 +85,9 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
-EOF
 
 # Makefile
-cat > Makefile << 'EOF'
+cat > Makefile
 NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -101,10 +112,9 @@ fclean: clean
 	rm -f $(NAME)
 re: fclean all
 .PHONY: all clean fclean re
-EOF
 
 # ft_strrchr.c
-cat > ft_strrchr.c << 'EOF'
+cat > ft_strrchr.c
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
@@ -122,10 +132,9 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s);
 	return (last);
 }
-EOF
 
 # Linked list files
-cat > ft_lstnew.c << 'EOF'
+cat > ft_lstnew.c
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)
@@ -139,9 +148,8 @@ t_list	*ft_lstnew(void *content)
 	new_node->next = NULL;
 	return (new_node);
 }
-EOF
 
-cat > ft_lstadd_front.c << 'EOF'
+cat > ft_lstadd_front.c
 #include "libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
@@ -151,9 +159,8 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst;
 	*lst = new;
 }
-EOF
 
-cat > ft_lstsize.c << 'EOF'
+cat > ft_lstsize.c
 #include "libft.h"
 
 int	ft_lstsize(t_list *lst)
@@ -168,9 +175,8 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (count);
 }
-EOF
 
-cat > ft_lstlast.c << 'EOF'
+cat > ft_lstlast.c
 #include "libft.h"
 
 t_list	*ft_lstlast(t_list *lst)
@@ -181,9 +187,8 @@ t_list	*ft_lstlast(t_list *lst)
 		lst = lst->next;
 	return (lst);
 }
-EOF
 
-cat > ft_lstadd_back.c << 'EOF'
+cat > ft_lstadd_back.c
 #include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
@@ -200,9 +205,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	last = ft_lstlast(*lst);
 	last->next = new;
 }
-EOF
 
-cat > ft_lstdelone.c << 'EOF'
+cat > ft_lstdelone.c
 #include "libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
@@ -212,9 +216,8 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 	del(lst->content);
 	free(lst);
 }
-EOF
 
-cat > ft_lstclear.c << 'EOF'
+cat > ft_lstclear.c
 #include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
@@ -234,9 +237,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	}
 	*lst = NULL;
 }
-EOF
 
-cat > ft_lstiter.c << 'EOF'
+cat > ft_lstiter.c
 #include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
@@ -249,9 +251,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
-EOF
 
-cat > ft_lstmap.c << 'EOF'
+cat > ft_lstmap.c
 #include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
@@ -278,7 +279,5 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_list);
 }
-EOF
-
 echo "✅ All files created!"
 ls -la *.c *.h Makefile README.md 2>/dev/null | grep -E '\.(c|h)$|Makefile|README'
